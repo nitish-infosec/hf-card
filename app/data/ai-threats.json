@@ -1,0 +1,360 @@
+{
+    "id": "admn-ai-threats",
+    "slug": "admn-ai-threats",
+    "title": "AI Threats",
+    "description": "Deepfake & Synthetic Media Awareness - Learn to identify and respond to AI-powered security threats.",
+    "estimatedTime": "10 min",
+    "difficulty": "intermediate",
+    "category": "Security Awareness",
+    "tags": [
+        "AI Security",
+        "Deepfakes",
+        "Synthetic Media",
+        "Enterprise Security"
+    ],
+    "cards": [
+        {
+            "id": "ai-threat-1",
+            "type": "learning",
+            "title": "What Are AI Threats?",
+            "content": "Artificial Intelligence is not only used to help organisations. It can also be misused to impersonate people, manipulate content, and deceive users. These AI-driven attacks are designed to look realistic, sound trustworthy, and push you to act quickly. AI threats are now treated as security incidents, not just mistakes.",
+            "imageUrl": "/ai-threats-1/images/image20.png",
+            "keyTerms": [
+                "AI threats",
+                "impersonate",
+                "security incidents"
+            ]
+        },
+        {
+            "id": "ai-threat-2",
+            "type": "learning",
+            "title": "What Is a Deepfake?",
+            "content": "Deepfakes use AI to copy a person's face, voice, and expressions. Attackers often impersonate senior leadership, government officials, and trusted colleagues. If it looks and sounds familiar, that is exactly the point.",
+            "imageUrl": "/ai-threats-1/images/image14.png",
+            "keyTerms": [
+                "Deepfakes",
+                "AI",
+                "impersonate"
+            ]
+        },
+        {
+            "id": "ai-threat-3",
+            "type": "learning",
+            "title": "What Is Synthetic Media?",
+            "content": "Synthetic media includes AI-generated voice notes, fake images and videos, AI-written emails and messages, and fake documents. Professional language and clear audio do not guarantee authenticity.",
+            "imageUrl": "/ai-threats-1/images/image1.png",
+            "keyTerms": [
+                "Synthetic media",
+                "AI-generated",
+                "authenticity"
+            ]
+        },
+        {
+            "id": "ai-threat-4",
+            "type": "learning",
+            "title": "Why Deepfakes Are a Serious Enterprise Risk",
+            "content": "\"Seeing is believing\" is no longer true. In the past, video and voice were trusted as proof. Today, AI can convincingly fake both. Deepfakes are dangerous because they bypass technical security controls, exploit human trust, and make fake requests look legitimate. Trust must be verified — not assumed.",
+            "imageUrl": "/ai-threats-1/images/image12.png",
+            "keyTerms": [
+                "Enterprise Risk",
+                "human trust",
+                "verified"
+            ]
+        },
+        {
+            "id": "ai-threat-5",
+            "type": "learning",
+            "title": "Enterprise Impact of Deepfakes",
+            "content": "Deepfakes target organisations, not individuals. A single deepfake incident can lead to unauthorised payments or approvals, leakage of sensitive data, reputational damage, and regulatory and compliance violations. That is why deepfakes are treated as enterprise security risks.",
+            "imageUrl": "/ai-threats-1/images/image8.png",
+            "keyTerms": [
+                "Enterprise Impact",
+                "security risks",
+                "compliance violations"
+            ]
+        },
+        {
+            "id": "ai-threat-6",
+            "type": "learning",
+            "title": "How AI Attacks Trick You",
+            "content": "AI attacks rely on urgency, authority, and familiarity. Common manipulation techniques include \"This is urgent\", \"I'm in a meeting, don't delay\", and \"This is confidential\". Urgency is used to override your judgement. Pause before acting.",
+            "imageUrl": "/ai-threats-1/images/image2.png",
+            "keyTerms": [
+                "urgency",
+                "authority",
+                "manipulation"
+            ]
+        },
+        {
+            "id": "ai-threat-7",
+            "type": "learning",
+            "title": "Scenario: CEO Voice Call",
+            "content": "You receive a voice call that sounds exactly like the CEO. The message: \"I need this done immediately. This is confidential. Don't delay.\" The voice is calm and convincing. The call is AI-generated using public recordings. Lesson: Authority does not remove the need for verification.",
+            "imageUrl": "/ai-threats-1/images/image9.png",
+            "keyTerms": [
+                "CEO",
+                "AI-generated",
+                "verification"
+            ]
+        },
+        {
+            "id": "ai-threat-8",
+            "type": "learning",
+            "title": "Scenario: Fake Video Meeting",
+            "content": "You join a short video meeting with a senior executive. Everything looks normal, but you notice slight lip-sync delay and unnatural blinking. The video feed is a deepfake overlay. Lesson: Even live video meetings can be faked.",
+            "imageUrl": "/ai-threats-1/images/image13.png",
+            "keyTerms": [
+                "video meeting",
+                "deepfake",
+                "lip-sync"
+            ]
+        },
+        {
+            "id": "ai-threat-9",
+            "type": "learning",
+            "title": "Scenario: Synthetic HR Message",
+            "content": "You receive a message from \"HR\" asking you to urgently verify payroll details. The message uses correct branding, sounds professional, and includes a link. The content is AI-generated to appear trustworthy. Lesson: Always verify requests involving personal or financial data.",
+            "imageUrl": "/ai-threats-1/images/image11.png",
+            "keyTerms": [
+                "HR",
+                "payroll",
+                "verify"
+            ]
+        },
+        {
+            "id": "ai-threat-10",
+            "type": "learning",
+            "title": "Warning Signs of Deepfakes",
+            "content": "AI often misses human behaviour and context. Common red flags include lip-sync mismatches, unnatural tone or pauses, avoiding verification, and requests to bypass normal process. If something feels off, trust your instinct.",
+            "imageUrl": "/ai-threats-1/images/image15.png",
+            "keyTerms": [
+                "Warning Signs",
+                "red flags",
+                "instinct"
+            ]
+        },
+        {
+            "id": "ai-threat-11",
+            "type": "learning",
+            "title": "How to Verify Safely",
+            "content": "Verification protects you and the organisation. Always call back using a known, official number, verify through approved channels, ask a confirmation question, and follow established processes. There are no exceptions, even for senior leaders.",
+            "imageUrl": "/ai-threats-1/images/image7.png",
+            "keyTerms": [
+                "Verify",
+                "official number",
+                "approved channels"
+            ]
+        },
+        {
+            "id": "ai-threat-12",
+            "type": "learning",
+            "title": "AI Threats Are Security Incidents",
+            "content": "AI misuse is an incident, not a mistake. Under Incident Response Training (Control T8.2.4): AI impersonation must be reported, end users are part of incident response, and early reporting limits damage. Do not ignore or delay reporting.",
+            "imageUrl": "/ai-threats-1/images/image3.png",
+            "keyTerms": [
+                "Security Incidents",
+                "reporting",
+                "incident response"
+            ]
+        },
+        {
+            "id": "ai-threat-13",
+            "type": "learning",
+            "title": "Regulatory & Compliance Expectations",
+            "content": "Deepfake awareness is a regulatory expectation. Frameworks such as UAE AI Security Policy and ISO/IEC 42001 (AI Management System) expect end users to apply human judgement, verify AI-generated content, and report suspected AI misuse immediately.",
+            "imageUrl": "/ai-threats-1/images/image18.png",
+            "keyTerms": [
+                "Regulatory",
+                "Compliance",
+                "UAE AI Security Policy"
+            ]
+        },
+        {
+            "id": "ai-threat-14",
+            "type": "learning",
+            "title": "Your Role as an End User",
+            "content": "You are the human firewall. Your responsibility is to stay alert, verify before acting, and report suspicious AI activity. AI can imitate people. Only humans can verify intent.",
+            "imageUrl": "/ai-threats-1/images/image5.png",
+            "keyTerms": [
+                "human firewall",
+                "verify",
+                "report"
+            ]
+        },
+        {
+            "id": "ai-quiz-1",
+            "type": "quiz",
+            "title": "Quick Check",
+            "question": "What is a deepfake?",
+            "content": "Test your understanding of deepfake technology.",
+            "imageUrl": "/ai-threats-1/images/image16.png",
+            "options": [
+                {
+                    "id": "a",
+                    "label": "A",
+                    "text": "A low-quality video",
+                    "isCorrect": false
+                },
+                {
+                    "id": "b",
+                    "label": "B",
+                    "text": "AI-generated media impersonating a real person",
+                    "isCorrect": true
+                },
+                {
+                    "id": "c",
+                    "label": "C",
+                    "text": "Encrypted media",
+                    "isCorrect": false
+                },
+                {
+                    "id": "d",
+                    "label": "D",
+                    "text": "Video compression error",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "A deepfake is AI-generated media that impersonates a real person, making it appear they said or did something they didn't."
+        },
+        {
+            "id": "ai-quiz-2",
+            "type": "quiz",
+            "title": "Quick Check",
+            "question": "What is the biggest warning sign in a video call?",
+            "content": "Identify the key indicator of a potential deepfake video call.",
+            "imageUrl": "/ai-threats-1/images/image19.png",
+            "options": [
+                {
+                    "id": "a",
+                    "label": "A",
+                    "text": "Office background",
+                    "isCorrect": false
+                },
+                {
+                    "id": "b",
+                    "label": "B",
+                    "text": "Camera quality",
+                    "isCorrect": false
+                },
+                {
+                    "id": "c",
+                    "label": "C",
+                    "text": "Lip-sync mismatch",
+                    "isCorrect": true
+                },
+                {
+                    "id": "d",
+                    "label": "D",
+                    "text": "Formal tone",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "Lip-sync mismatches are a common indicator of deepfake videos, as AI often struggles to perfectly synchronize audio with facial movements."
+        },
+        {
+            "id": "ai-quiz-3",
+            "type": "quiz",
+            "title": "Quick Check",
+            "question": "What should you do if you receive an urgent AI-suspected request?",
+            "content": "Choose the safest response to a suspicious urgent request.",
+            "imageUrl": "/ai-threats-1/images/image6.png",
+            "options": [
+                {
+                    "id": "a",
+                    "label": "A",
+                    "text": "Act immediately",
+                    "isCorrect": false
+                },
+                {
+                    "id": "b",
+                    "label": "B",
+                    "text": "Share the information",
+                    "isCorrect": false
+                },
+                {
+                    "id": "c",
+                    "label": "C",
+                    "text": "Verify using another official channel",
+                    "isCorrect": true
+                },
+                {
+                    "id": "d",
+                    "label": "D",
+                    "text": "Ignore it",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "Always verify urgent requests through a separate, trusted communication channel before taking action."
+        },
+        {
+            "id": "ai-quiz-4",
+            "type": "quiz",
+            "title": "Quick Check",
+            "question": "What is the safest action when receiving a suspicious message?",
+            "content": "You receive an unexpected message asking for urgent action. What should you do?",
+            "imageUrl": "/ai-threats-1/images/image17.png",
+            "options": [
+                {
+                    "id": "a",
+                    "label": "A",
+                    "text": "Reply quickly",
+                    "isCorrect": false
+                },
+                {
+                    "id": "b",
+                    "label": "B",
+                    "text": "Forward to others",
+                    "isCorrect": false
+                },
+                {
+                    "id": "c",
+                    "label": "C",
+                    "text": "Report and verify",
+                    "isCorrect": true
+                },
+                {
+                    "id": "d",
+                    "label": "D",
+                    "text": "Save the number",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "Report suspicious messages to your security team and verify the request through official channels."
+        },
+        {
+            "id": "ai-quiz-5",
+            "type": "quiz",
+            "title": "Quick Check",
+            "question": "Why are deepfakes treated as security incidents?",
+            "content": "Understand the enterprise security implications of deepfakes.",
+            "imageUrl": "/ai-threats/images/image10.png",
+            "options": [
+                {
+                    "id": "a",
+                    "label": "A",
+                    "text": "AI is unreliable",
+                    "isCorrect": false
+                },
+                {
+                    "id": "b",
+                    "label": "B",
+                    "text": "Policies require it",
+                    "isCorrect": false
+                },
+                {
+                    "id": "c",
+                    "label": "C",
+                    "text": "AI can convincingly impersonate humans",
+                    "isCorrect": true
+                },
+                {
+                    "id": "d",
+                    "label": "D",
+                    "text": "It slows attackers",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "Deepfakes are treated as security incidents because AI can convincingly impersonate people, potentially leading to financial loss, data breaches, or other serious harm."
+        }
+    ]
+}

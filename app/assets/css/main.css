@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+    font-feature-settings: 'cv11', 'cv08';
+  }
+
+  body {
+    @apply bg-white dark:bg-dark-500 text-gray-900 dark:text-white transition-colors duration-300;
+  }
+}
+
+@layer components {
+
+  /* Card Styles */
+  .card {
+    @apply bg-white dark:bg-dark-200 rounded-2xl shadow-card dark:shadow-card-dark;
+    @apply border border-gray-100 dark:border-gray-800/50;
+    @apply transition-all duration-300 ease-out;
+    @apply select-none;
+    min-height: 560px;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  .card:hover {
+    @apply shadow-card-hover dark:shadow-glow;
+  }
+
+  /* Button Base */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg;
+    @apply font-medium text-sm transition-all duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
+  }
+
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700;
+    @apply shadow-sm hover:shadow-md;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent hover:bg-gray-100 dark:hover:bg-dark-100;
+    @apply text-gray-700 dark:text-gray-300;
+  }
+
+  .btn-icon {
+    @apply w-9 h-9 inline-flex items-center justify-center rounded-xl;
+    @apply bg-white/80 dark:bg-dark-200/80 backdrop-blur-sm;
+    @apply hover:bg-gray-100/80 dark:hover:bg-dark-100/80;
+    @apply text-gray-600 dark:text-gray-400;
+    @apply transition-all duration-200;
+  }
+
+  /* Quiz Option Styles */
+  .quiz-option {
+    @apply flex items-center gap-3 p-4 rounded-xl cursor-pointer;
+    @apply border border-gray-200 dark:border-gray-700;
+    @apply transition-all duration-200 ease-out;
+    @apply hover:border-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900/20;
+  }
+
+  .quiz-option.selected {
+    @apply border-primary-500 bg-primary-50 dark:bg-primary-900/30;
+  }
+
+  .quiz-option.correct {
+    @apply border-green-500 bg-green-50 dark:bg-green-900/20;
+  }
+
+  .quiz-option.incorrect {
+    @apply border-red-500 bg-red-50 dark:bg-red-900/20;
+  }
+
+  /* Option Letter Badge */
+  .option-badge {
+    @apply w-8 h-8 flex items-center justify-center rounded-lg;
+    @apply bg-gray-100 dark:bg-dark-300 text-gray-600 dark:text-gray-400;
+    @apply font-medium text-sm;
+    @apply transition-colors duration-200;
+  }
+
+  .quiz-option.selected .option-badge {
+    @apply bg-primary-500 text-white;
+  }
+
+  .quiz-option.correct .option-badge {
+    @apply bg-green-500 text-white;
+  }
+
+  /* Keyword Highlight - matching hf-cards-main */
+  .keyword,
+  .highlight-term {
+    background: #2e8ab833;
+    color: #1b5998;
+    padding: 0.15em 0.4em;
+    border-radius: 0.3em;
+    font-weight: 600;
+    border: 1px solid hsl(200 50% 50% / 0.35);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  /* Settings Panel */
+  .settings-panel {
+    @apply fixed right-0 top-0 h-full w-96 z-50;
+    @apply bg-white dark:bg-dark-200 shadow-2xl;
+    @apply border-l border-gray-200 dark:border-gray-800;
+    @apply transform transition-transform duration-300 ease-out;
+    @apply overflow-y-auto;
+  }
+
+  /* Background Styles */
+  .bg-style-deep-ocean {
+    background: linear-gradient(135deg, #081021, #0b1441, #0a335c);
+  }
+
+  .bg-style-admn {
+    background: linear-gradient(135deg, #c8eae7, #abdee3, #9ccbe2, #b5c4e3, #edd4d8, #f2e3d9)
+  }
+
+  .bg-style-mesh {
+    background: radial-gradient(at 40% 20%, hsl(280 70% 70% / .5) 0px, transparent 50%), radial-gradient(at 80% 0%, hsl(260 80% 75% / .4) 0px, transparent 50%), radial-gradient(at 0% 50%, hsl(270 75% 65% / .4) 0px, transparent 50%), radial-gradient(at 80% 50%, hsl(250 80% 70% / .4) 0px, transparent 50%), radial-gradient(at 0% 100%, hsl(290 70% 65% / .35) 0px, transparent 50%), radial-gradient(at 80% 100%, hsl(240 70% 75% / .4) 0px, transparent 50%), #f2eff5;
+  }
+
+  .bg-style-hybrid {
+    background: radial-gradient(at 40% 20%, hsl(280 70% 60% / .4) 0px, transparent 50%), radial-gradient(at 80% 0%, hsl(190 90% 50% / .3) 0px, transparent 50%), radial-gradient(at 0% 50%, hsl(340 80% 60% / .3) 0px, transparent 50%), radial-gradient(at 80% 50%, hsl(220 80% 60% / .3) 0px, transparent 50%), radial-gradient(at 0% 100%, hsl(20 90% 55% / .25) 0px, transparent 50%), radial-gradient(at 80% 100%, hsl(260 80% 55% / .3) 0px, transparent 50%), #f2f2f8;
+  }
+
+  /* Glass effect */
+  .glass {
+    @apply bg-white/80 dark:bg-dark-200/80 backdrop-blur-lg;
+  }
+}
+
+@layer utilities {
+
+  /* Perspective for 3D transforms */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-dark-400 rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-dark-100 rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-gray-600;
+  }
+}
