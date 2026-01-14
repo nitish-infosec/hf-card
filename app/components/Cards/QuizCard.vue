@@ -46,7 +46,7 @@ const handleSelect = (optionId: string) => {
 <template>
   <div class="card relative h-full flex flex-col">
     <!-- Quiz Badge - Top Right -->
-    <div class="absolute top-4 right-4 z-10">
+    <div class="absolute top-3 sm:top-4 right-3 sm:right-4 z-10">
       <span class="quiz-badge">
         <Icon name="heroicons:academic-cap" class="w-3 h-3" />
         Quiz
@@ -54,15 +54,15 @@ const handleSelect = (optionId: string) => {
     </div>
 
     <!-- Header with Title -->
-    <div class="p-6 pb-3 flex-shrink-0">
-      <h2 class="text-xl font-bold text-gray-900 dark:text-white pr-16 leading-tight">
+    <div class="p-4 sm:p-6 pb-2 sm:pb-3 flex-shrink-0">
+      <h2 class="text-lg sm:text-xl font-bold text-gray-900 pr-14 sm:pr-16 leading-tight">
         {{ card.question || card.title }}
       </h2>
     </div>
 
     <!-- Image Section -->
-    <div v-if="card.imageUrl || card.image" class="px-6 flex-1 min-h-0">
-      <div class="relative rounded-2xl overflow-hidden h-full bg-gray-100 dark:bg-gray-800">
+    <div v-if="card.imageUrl || card.image" class="px-4 sm:px-6 flex-1 min-h-0">
+      <div class="relative rounded-xl sm:rounded-2xl overflow-hidden h-full bg-gray-100">
         <img
           :src="card.imageUrl || card.image"
           :alt="card.question || card.title"
@@ -73,7 +73,7 @@ const handleSelect = (optionId: string) => {
     </div>
 
     <!-- Options -->
-    <div class="p-6 pt-3 flex-shrink-0 flex flex-col gap-2">
+    <div class="p-4 sm:p-6 pt-2 sm:pt-3 flex-shrink-0 flex flex-col gap-2">
       <button
         v-for="(option, index) in card.options"
         :key="option.id"
@@ -83,16 +83,16 @@ const handleSelect = (optionId: string) => {
         @click="handleSelect(option.id)"
       >
         <span class="option-letter">{{ option.label || String.fromCharCode(65 + index) }}</span>
-        <span class="flex-1 text-sm text-gray-900 dark:text-white text-left">{{ option.text }}</span>
+        <span class="flex-1 text-xs sm:text-sm text-gray-900 text-left">{{ option.text }}</span>
         <Icon 
           v-if="showFeedback && option.id === correctOption?.id" 
           name="heroicons:check-circle-solid" 
-          class="w-5 h-5 text-green-500 flex-shrink-0"
+          class="w-4 h-4 sm:w-5 sm:h-5 text-green-500 flex-shrink-0"
         />
         <Icon 
           v-else-if="showFeedback && selectedAnswer === option.id && !isCorrect" 
           name="heroicons:x-circle-solid" 
-          class="w-5 h-5 text-red-500 flex-shrink-0"
+          class="w-4 h-4 sm:w-5 sm:h-5 text-red-500 flex-shrink-0"
         />
       </button>
 
@@ -103,7 +103,7 @@ const handleSelect = (optionId: string) => {
             :name="isCorrect ? 'heroicons:check-circle-solid' : 'heroicons:x-circle-solid'" 
             class="w-4 h-4"
           />
-          <span class="font-medium text-sm">{{ isCorrect ? 'Correct!' : 'Not quite right' }}</span>
+          <span class="font-medium text-xs sm:text-sm">{{ isCorrect ? 'Correct!' : 'Not quite right' }}</span>
         </div>
       </Transition>
     </div>

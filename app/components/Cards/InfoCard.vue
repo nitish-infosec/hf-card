@@ -34,15 +34,15 @@ const contentArray = computed(() => {
 <template>
   <div class="card h-full flex flex-col relative select-none">
     <!-- Card Header - fixed height -->
-    <div class="p-8 pb-4 flex-shrink-0">
-      <h2 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
+    <div class="p-4 sm:p-6 md:p-8 pb-3 sm:pb-4 flex-shrink-0">
+      <h2 class="text-xl sm:text-2xl font-bold leading-tight text-gray-900">
         {{ card.title }}
       </h2>
     </div>
 
     <!-- Card Image - fills remaining space between title and content -->
-    <div v-if="card.imageUrl || card.image" class="px-8 flex-1 min-h-[120px]">
-      <div class="relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-gray-800 h-full">
+    <div v-if="card.imageUrl || card.image" class="px-4 sm:px-6 md:px-8 flex-1 min-h-[100px] sm:min-h-[120px]">
+      <div class="relative rounded-xl sm:rounded-2xl overflow-hidden bg-gray-100 h-full">
         <img
           :src="card.imageUrl || card.image"
           :alt="card.title"
@@ -53,17 +53,16 @@ const contentArray = computed(() => {
     </div>
 
     <!-- Card Content - shows ALL text without truncation -->
-    <div class="p-8 pt-5 flex-shrink-0">
+    <div class="p-4 sm:p-6 md:p-8 pt-4 sm:pt-5 flex-shrink-0">
       <!-- String with key terms -->
       <div 
         v-if="isStringContent" 
-        class="text-gray-700 dark:text-gray-300 leading-relaxed" 
-        style="font-size: 20px;"
+        class="text-gray-700 leading-relaxed text-base sm:text-lg md:text-xl"
         v-html="highlightedContent"
       ></div>
       
       <!-- Array format (legacy) -->
-      <div v-else class="text-gray-700 dark:text-gray-300 leading-relaxed" style="font-size: 20px;">
+      <div v-else class="text-gray-700 leading-relaxed text-base sm:text-lg md:text-xl">
         <template v-for="(part, index) in contentArray" :key="index">
           <span v-if="part.isKeyword" class="highlight-term">{{ part.text }}</span>
           <span v-else>{{ part.text }}</span>
@@ -71,10 +70,10 @@ const contentArray = computed(() => {
       </div>
 
       <!-- Quick Tip -->
-      <div v-if="card.tip" class="mt-6 p-4 rounded-xl bg-orange-50 dark:bg-orange-900/20 border border-orange-100 dark:border-orange-800/30">
-        <div class="flex items-start gap-3">
-          <Icon name="heroicons:light-bulb" class="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
-          <p class="text-sm text-gray-800 dark:text-gray-200">
+      <div v-if="card.tip" class="mt-4 sm:mt-6 p-3 sm:p-4 rounded-xl bg-orange-50 border border-orange-100">
+        <div class="flex items-start gap-2 sm:gap-3">
+          <Icon name="heroicons:light-bulb" class="w-4 h-4 sm:w-5 sm:h-5 text-orange-500 flex-shrink-0 mt-0.5" />
+          <p class="text-xs sm:text-sm text-gray-800">
             <span class="font-bold">Quick Tip:</span> {{ card.tip }}
           </p>
         </div>
