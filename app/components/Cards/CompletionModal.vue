@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { TrainingCard, QuizAnswer } from '~/types/training'
+import confetti from 'canvas-confetti'
 
 const props = defineProps<{
   isOpen: boolean
@@ -22,7 +23,38 @@ const passed = computed(() => props.score >= PASS_THRESHOLD)
 const showContent = ref(false)
 const animatedScore = ref(0)
 
-// Animate score counter
+// Trigger confetti on pass
+const triggerConfetti = () => {
+  const duration = 3000
+  const end = Date.now() + duration
+
+  const frame = () => {
+    // Left side burst
+    confetti({
+      particleCount: 3,
+      angle: 60,
+      spread: 55,
+      origin: { x: 0 },
+      colors: ['#22c55e', '#3b82f6', '#f59e0b', '#8b5cf6'],
+    })
+    // Right side burst
+    confetti({
+      particleCount: 3,
+      angle: 120,
+      spread: 55,
+      origin: { x: 1 },
+      colors: ['#22c55e', '#3b82f6', '#f59e0b', '#8b5cf6'],
+    })
+
+    if (Date.now() < end) {
+      requestAnimationFrame(frame)
+    }
+  }
+
+  setTimeout(frame, 300)
+}
+
+// Animate score counter and trigger confetti
 watch(() => props.isOpen, (isOpen) => {
   if (isOpen) {
     showContent.value = false
@@ -31,6 +63,11 @@ watch(() => props.isOpen, (isOpen) => {
     setTimeout(() => {
       showContent.value = true
     }, 200)
+    
+    // Trigger confetti if passed
+    if (passed.value) {
+      triggerConfetti()
+    }
     
     const duration = 1500
     const startTime = Date.now()
