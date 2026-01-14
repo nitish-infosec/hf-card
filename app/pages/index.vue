@@ -124,7 +124,7 @@ useHead({
           />
           <NavigationArrowButton
             direction="right"
-            :disabled="!canNavigateNext"
+            :disabled="!canNavigateNext || isLastCard"
             @click="nextCard"
           />
         </template>
